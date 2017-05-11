@@ -50,6 +50,7 @@ export interface GeneratedFile {
   srcFileUrl: string
 }
 
+const EXT = /(\.ts|\.d\.ts|\.js|\.jsx|\.tsx)$/;
 const FILE_EXTENSION = /\.[^/.]+$/;
 const INJECTOR = /(\w+?)Injector/;
 
@@ -168,6 +169,7 @@ export class AotPlugin {
 
       changedFiles = changedFiles
         .filter((file) => !this.resources.has(file))
+        .filter((file) => EXT.test(file))
         .concat(extraFiles);
 
       this.prevTimestamps = new Map(objToMap<number>(compilation.fileTimestamps));
