@@ -1,11 +1,13 @@
-# Ultimate Angular AoT loader (beta)
+# [deprecated] AoT loader
 
 [![Build Status][circle-badge]][circle-badge-url]
 [![Dependency Status][david-badge]][david-badge-url]
 [![devDependency Status][david-dev-badge]][david-dev-badge-url]
 [![npm][npm-badge]][npm-badge-url]
 
-**This is currently in beta - please report any issues you may have with it**
+<p align="center">:warning: This project is deprecated :warning:</p>
+
+> Project is deprecated as AoT mode will be a default soon, we suggest using ngc until then as the official offering from Angular.
 
 This loader allows you to compile and develop your Angular applications using AoT compilation, removing the need for you to include the Angular compiler when distributing your app, as well as making it super fast.
 
